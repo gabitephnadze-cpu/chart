@@ -1,1 +1,1 @@
-This code generates 1000 random names
+This code generates 500 random names
