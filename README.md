@@ -1,1 +1,1 @@
-This code generates 500 random names
+This code converts kilometers to miles and miles to kilometers.
