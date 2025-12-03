@@ -1,1 +1,1 @@
-This code creates a web-site that converts km into mile and mile into km.
+This code generates a desktop type calculator.
