@@ -1,1 +1,1 @@
-This code converts kilometers to miles and miles to kilometers.
+This is a code that generates a desktop type calculator.
