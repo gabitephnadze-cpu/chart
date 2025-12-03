@@ -3,7 +3,7 @@ import FreeSimpleGUI as sg
 sg.theme('DarkTeal16')
 
 button_size = (5, 2)
-font_style = ('Helvetica', 20)
+font_style = ('Helvetica', 19)
 
 layout = [
     [sg.Text('', key='DISPLAY', size=(20, 1), justification='right', font=('Helvetica', 24),
