@@ -1,1 +1,1 @@
-This is a code that generates a desktop type calculator.
+This is a code that generates an app that asks about your age, name for a driving license (NOT REAL)
