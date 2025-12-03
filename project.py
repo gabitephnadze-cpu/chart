@@ -1,33 +1,14 @@
-import FreeSimpleGUI as sg
+import streamlit
 
-layout = [
-    [sg.Text('Enter Your Name:'), sg.InputText()],
-    [sg.Text('Select Your Age:'), sg.Slider(range=(1, 100), orientation='h', size=(20, 15))],
-    [sg.Checkbox('I Agree To The TOS')],
-    [sg.Button('Submit'), sg.Button('Exit')]
-]
+streamlit.title('კმ/მილი გადამყვანი')
 
-window = sg.Window('Driving License', layout)
+option = streamlit.radio('აირჩიეთ:', ('კმ/მილი', 'მილი/კმ'))
 
-while True:
-    event, values = window.read()
-    print(event,values)
-    if event == sg.WINDOW_CLOSED or event == 'Exit':
-        break
-    
-    if event == 'Submit':
-        name = values[0]
-        age = values[1]
-        agreed = values[2]
-        
-        if not agreed:
-            sg.popup('You Must Agree To Our TOS!')
-            continue
-        
-        if age < 16:
-            message = f'{name.capitalize()} You Are Not Elligable To Get A Driving License Yet'
-        elif age >= 16:
-            message = f'{name.capitalize()} You Are Elligable To Get A Driving License'
-        
-        sg.popup(message)
-window.close() 
+value = streamlit.number_input('შეიყვანეთ რიცხვი')
+
+if option == 'კმ/მილი':
+    result = value * 0.62
+    streamlit.write(f'{value} კმ = {result:.3f} მილი')
+if option == 'მილი/კმ':
+    result = value / 0.62
+    streamlit.write(f'{value} მილი = {result:.3f} კმ')
