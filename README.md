@@ -1,1 +1,1 @@
-This code converts km to mile and mile to km.
+This code shows a web-site type chart.
